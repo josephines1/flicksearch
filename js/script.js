@@ -10,6 +10,7 @@ function searchMovies(pageNumber = 1) {
       page: pageNumber,
     },
     success: function (result) {
+      $(".pagination").html("");
       if (result.Response === "True") {
         let movies = result.Search;
         let moviesContent = "";
